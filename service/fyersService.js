@@ -53,6 +53,7 @@ class FyersService {
         return response;
       } else {
         console.log('hjhffjh');
+        
         throw new Error('Failed to generate access token');
       }
     } catch (error) {
