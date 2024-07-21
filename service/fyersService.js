@@ -12,7 +12,9 @@ class FyersService {
 
   connectToDB() {
    
-    mongoose.connect(process.env.MONGO_DB_URL, { useNewUrlParser: true, useUnifiedTopology: true })
+    mongoose.connect(process.env.MONGO_DB_URL,  {
+      dbName: "test",
+    })
       .then(() => console.log('MongoDB connected'))
       .catch(err => console.error('MongoDB connection error:', err));
   }
