@@ -49,12 +49,14 @@ class FyersService {
           refreshToken: refresh_token,
           expiresIn: expiresIn // Store expiration date
         }, { upsert: true });
-       console.log(response);
+     
         return response;
       } else {
+        console.log('hjhffjh');
         throw new Error('Failed to generate access token');
       }
     } catch (error) {
+      console.log('hjhffjh',error);
       throw error;
     }
   }
