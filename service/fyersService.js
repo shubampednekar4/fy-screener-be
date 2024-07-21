@@ -31,6 +31,7 @@ class FyersService {
 
   async generateAccessToken(clientId, secretKey, authCode) {
     try {
+        console.log('inside catch');
       const response = await this.fyers.generate_access_token({
         client_id: clientId,
         secret_key: secretKey,
@@ -53,7 +54,7 @@ class FyersService {
         return response;
       } else {
         console.log('hjhffjh');
-        
+
         throw new Error('Failed to generate access token');
       }
     } catch (error) {

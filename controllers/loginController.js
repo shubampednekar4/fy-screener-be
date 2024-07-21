@@ -21,7 +21,7 @@ const login = (req, res) => {
   
     try {
       const response = await fyersService.generateAccessToken(process.env.FYERS_APP_ID, process.env.FYERS_SECRET_ID, auth_code);
-    //   console.log(response);
+      console.log(response);
       res.status(200).json({ message: "Logged in" });
     } catch (error) {
       res.status(401).json({ message: 'Something bad happened' });
@@ -33,7 +33,7 @@ const login = (req, res) => {
       if (!accessToken) {
         return res.status(401).json({ message: 'Access token is missing' });
       }
-  
+      
       // Use Fyers API to get profile information
       fyersService.fyers.setAppId(process.env.FYERS_APP_ID);
       fyersService.fyers.setAccessToken(accessToken);
