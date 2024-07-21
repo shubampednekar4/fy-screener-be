@@ -4,7 +4,7 @@
   "description": "for screening the stocks data using fyers api",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon server.js",
+    "start": "node server.js",
     "dev": "nodemon"
   },
   "author": "shubam",
